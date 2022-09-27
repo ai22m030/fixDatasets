@@ -31,7 +31,7 @@ class DataCorrector:
             tmp = pd.DataFrame(data=[[line, comma_count, semicolon_count]], columns=['line', 'commas', 'semicolons'])
             result_step_2 = pd.concat([result_step_2, tmp], ignore_index=True)
 
-        
+
 
         print(result_step_2.describe())
         print(result_step_2[result_step_2.semicolons == 0 and result_step_2.commas == 0])
